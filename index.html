@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Varun Korale - Portfolio</title>
+</head>
+<body>
+  <header>
+      <div class="logo">Varun Korale</div>
+      <nav>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+      </nav>
+      <button id="themeButton">Dark Mode</button>
+  </header>
+  <main>
+      <section class="intro">
+        <img src="Varun_photo.JPG" alt="Varun Korale">
+          <div>
+            <h1>Varun Korale</h1>
+            <p class="tagline">
+              CS & AI student at Scaler School of Technology,
+              building Kopa on the side.
+            </p>
+          </div>
+      </section>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I'm studying towards becoming an engineer, focused on CS and AI
+          at Scaler School of Technology, alongside a parallel BSc in
+          Computer Science from BITS Pilani.
+          I'm also interested in entrepreneurship and run a small
+          business called
+          <a href="https://buykopa.odoo.com" target="_blank">Kopa</a>.
+          Back in school, I was Head Boy.
+        </p>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>HTML</li>
+          <li>CCS</li>
+          <li>JavaScript</li>
+          <li>JAVA</li>
+          <li>Problem Solving</li>
+          <li>Business Sense</li>
+        </ul>
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+          <table>
+            <tr>
+              <th>Institution</th>
+              <th>Program</th>
+              <th>Years</th>
+            </tr>
+            <tr>
+              <td>Global Academy for Learning School</td>
+              <td>1st - 10th</td>
+              <td>2014 - 2024</td>
+            </tr>
+            <tr>
+              <td>The Kingdom College</td>
+              <td>11th - 12th</td>
+              <td>2024 - 2026</td>
+            </tr>
+            <tr>
+              <td>Allen</td>
+              <td>11th - 12th</td>
+              <td>2024 - 2026</td>
+            </tr>
+            <tr>
+              <td>Scaler School of Technology</td>
+              <td>B.Tech, CS & AI</td>
+              <td>2026 - 2030</td>
+            </tr>
+            <tr>
+              <td>BITS Pilani</td>
+              <td>BSc, Computer Science</td>
+              <td>2026 - 2030</td>
+            </tr>
+          </table>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="project">
+            <img src="kopa_logo.jpg" alt="Kopa">
+              <div class="project-content">
+                <h3>Kopa</h3>
+                <p>My own business, currently live and running.</p>
+                <a href="https://buykopa.odoo.com" target="_blank"> Visit site </a>
+          </div>
+        </div>
+        <div class="project">
+          <img src="vk.jpeg" alt="Project 2">
+          <div class="project-content">
+            <h3>Project Two</h3>
+            <p>A project that I will keep updating.</p>
+            <a href="https://varuncoderx.github.io/first-website/" target="_blank"> Visit site </a>
+          </div>
+        </div>
+        </div>
+      </section>
+        <section id="contact">
+          <h2>Get in Touch</h2>
+          <form id="contactForm">
+            <input type="text" id="contactName" placeholder="Your name" required>
+            <input type="email" id="contactEmail" placeholder="Your email" required>
+            <textarea id="contactMessage" rows="4" placeholder="Your message" required>
+            </textarea>
+            <button type="submit">Send Message</button>
+            <p id="formMessage"></p>
+          </form>
+            <div class="contact-links">
+              <a href="tel:8310932536">Phone: 8310932536</a>
+              <a href="mailto:varunkoralee@gmail.com">varunkoralee@gmail.com</a>
+              <a href="mailto:varun.26bcs10091@sst.scaler.com">varun.26bcs10091@sst.scaler.com</a>
+              <a href="https://www.linkedin.com/in/varun-korale-310387416/" target="_blank">LinkedIn</a>
+              <a href="https://instagram.com/varun.korale" target="_blank">Instagram</a>
+              <a href="https://github.com/Varuncoderx" target="_blank">GitHub</a>
+            </div>
+        </section>
+  </main>
+
+  <script>
+      let themeButton = document.getElementById("themeButton");
+      themeButton.onclick = function() {
+        document.body.classList.toggle("dark");
+        if (document.body.classList.contains("dark")) {
+          themeButton.innerText = "Light Mode";
+        } else {
+          themeButton.innerText = "Dark Mode";
+        }
+  };
+      document.getElementById("contactForm").onsubmit = function(event) {
+      event.preventDefault();
+      document.getElementById("formMessage").innerText =
+      "Thanks! Your message has been received.";
+      document.getElementById("contactForm").reset();
+  };
+  </script>
+</body>
+</html>
